@@ -6,5 +6,5 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
  && pip install --no-cache-dir -r /app/requirements.txt
 COPY actions.py /app/actions.py
 EXPOSE 8000
-CMD ["sh", "-c", "python -m rasa_sdk --actions actions --port $PORT --host 0.0.0.0 --debug"]
+CMD ["sh", "-c", "python -m rasa_sdk --actions actions --port $PORT --debug"]
 
